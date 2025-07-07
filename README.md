@@ -1,12 +1,52 @@
-# React + Vite
+# Luna Petshop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Luna Petshop é uma landing page moderna desenvolvida com [React](https://react.dev/), [Vite](https://vitejs.dev/) e [Tailwind CSS](https://tailwindcss.com/). O objetivo é apresentar os serviços de um petshop de forma atrativa, responsiva e profissional, facilitando o contato do cliente, e mostrando do o trabalho da empresa.
 
-Currently, two official plugins are available:
+## ✨ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/) (padronização de código)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+  [App.jsx](http://_vscodecontentref_/0)
+  [Hero.jsx](http://_vscodecontentref_/1)
+  [main.jsx](http://_vscodecontentref_/2)
+  [index.css](http://_vscodecontentref_/3)
+  assets/
+    logo.png
+    cachorro1.png
+    Hero.jpeg
+    pata1.png
+    pata2.png
+    pata3.png
+    pata4.png
+public/
+  logo.png
+  vite.svg
+
+  Workspace
+(rerun without)
+Collecting workspace information
+
+Claro! Aqui está um exemplo de README para seu projeto Luna Petshop:
+
+🚀 Como rodar o projeto
+Para iniciar o servidor de desenvolvimento:
+
+Acesse http://localhost:5173 no navegador.
+
+🛠 Scripts disponíveis
+npm run dev — Inicia o servidor de desenvolvimento
+npm run build — Gera a versão de produção
+npm run preview — Visualiza a build de produção localmente
+npm run lint — Executa o linter
+📁 Estrutura de Pastas
+📷 Imagens
+As imagens utilizadas estão na pasta src/assets.
+
+
+
+Feito com 💙 por Lidiane
