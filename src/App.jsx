@@ -1,12 +1,19 @@
-import { Hero } from "./Hero"
+import { Hero } from "./components/Hero";
+import { Service } from "./components/Service";
+
+import Gallery from "./components/Gallery";
 
 
 
 function App() {
- 
+
 
   return (
-    <Hero/>
+    <>
+      <Hero />
+      <Service />
+    <Gallery/>
+    </>
   )
 }
 

@@ -1,6 +1,6 @@
 # Luna Petshop
 
-Luna Petshop é uma landing page moderna desenvolvida com [React](https://react.dev/), [Vite](https://vitejs.dev/) e [Tailwind CSS](https://tailwindcss.com/). O objetivo é apresentar os serviços de um petshop de forma atrativa, responsiva e profissional, facilitando o contato do cliente, e mostrando do o trabalho da empresa.
+Luna Petshop é uma landing page moderna desenvolvida com [React](https://react.dev/), [Vite](https://vitejs.dev/) e [Tailwind CSS](https://tailwindcss.com/). O objetivo é apresentar os serviços de um petshop de forma atrativa, responsiva e profissional, facilitando o contato do cliente e mostrando o trabalho da empresa.
 
 ## ✨ Tecnologias Utilizadas
 
@@ -10,11 +10,24 @@ Luna Petshop é uma landing page moderna desenvolvida com [React](https://react.
 - [ESLint](https://eslint.org/) (padronização de código)
 
 
+
+Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+
+## 🛠 Scripts disponíveis
+
+- `npm run dev` — Inicia o servidor de desenvolvimento
+- `npm run build` — Gera a versão de produção
+- `npm run preview` — Visualiza a build de produção localmente
+- `npm run lint` — Executa o linter
+
+## 📁 Estrutura de Pastas
+
+```
 src/
-  [App.jsx](http://_vscodecontentref_/0)
-  [Hero.jsx](http://_vscodecontentref_/1)
-  [main.jsx](http://_vscodecontentref_/2)
-  [index.css](http://_vscodecontentref_/3)
+  App.jsx
+  Hero.jsx
+  main.jsx
+  index.css
   assets/
     logo.png
     cachorro1.png
@@ -26,27 +39,32 @@ src/
 public/
   logo.png
   vite.svg
+```
 
-  Workspace
-(rerun without)
-Collecting workspace information
+## 📷 Imagens
 
-Claro! Aqui está um exemplo de README para seu projeto Luna Petshop:
+As imagens utilizadas estão na pasta `src/assets`.
 
-🚀 Como rodar o projeto
-Para iniciar o servidor de desenvolvimento:
+## 🖼️ Favicon
 
-Acesse http://localhost:5173 no navegador.
+O favicon do site foi personalizado para exibir o logo do Luna Petshop. O arquivo `logo.png` foi adicionado e referenciado na tag `<link rel="icon" ...>` do `index.html`.
 
-🛠 Scripts disponíveis
-npm run dev — Inicia o servidor de desenvolvimento
-npm run build — Gera a versão de produção
-npm run preview — Visualiza a build de produção localmente
-npm run lint — Executa o linter
-📁 Estrutura de Pastas
-📷 Imagens
-As imagens utilizadas estão na pasta src/assets.
+## 🎨 Logo Redondo
+
+Para exibir o logo de forma arredondada na página, foi utilizada a tag `<img>` com a classe CSS:
+
+```css
+.logo-redonda {
+  border-radius: 50%;
+}
+```
+
+Exemplo de uso no HTML:
+
+```html
+<img src="/logo.png" alt="Logo Luna Petshop" class="logo-redonda" width="120" height="120" />
+```
 
 
 
-Feito com 💙 por Lidiane
+Feito com 💙
