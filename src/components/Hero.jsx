@@ -30,7 +30,6 @@ export function Hero() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#home">Home</a>
-            <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#sobre">Sobre</a>
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#servicos">Serviços</a>
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#galeria">Galeria</a>
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#depoimento">Depoimento</a>

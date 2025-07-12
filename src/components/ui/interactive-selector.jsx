@@ -1,23 +1,28 @@
-import Banho from "../../assets/banho.jpeg";
-import Consulta from "../../assets/consulta.jpeg";
-import Hotel from "../../assets/hotel.jpeg";
-import Creche from "../../assets/creche.jpeg";
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import {
   GiShower,
   GiHealthNormal,
   GiDogHouse,
   GiDogBowl,
- 
+   GiSittingDog
+
 } from "react-icons/gi"; // Biblioteca temática de pets!
+
+import { FaBox } from "react-icons/fa";
+
+
+
+
+import Banho from "../../assets/banho.jpeg";
+import Consulta from "../../assets/consulta.jpeg";
+import Hotel from "../../assets/hotel.jpeg";
+import Creche from "../../assets/creche.jpeg";
+import Adestramento from "../../assets/Adestramento.jpg"; // você pode adicionar essa imagem
+import Transporte from "../../assets/Transporte.jpg";     // e essa também, ou imagens que preferir
 
 const InteractiveSelector = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [animatedOptions, setAnimatedOptions] = useState([]);
+ const [animatedOptions, setAnimatedOptions] = useState([]);
 
   const options = [
     {
@@ -44,8 +49,18 @@ const InteractiveSelector = () => {
       image: Creche,
       icon: <GiDogBowl size={24} className="text-white hover:text-yellow-400 transition-colors duration-300 " />,
     },
-    
-  
+    {
+      title: "Adestramento",
+      description: "Educação com carinho e reforço positivo!",
+      image: Adestramento,
+      icon: < GiSittingDog size={24} className="text-white hover:text-yellow-400 transition-colors duration-300" />,
+    },
+    {
+      title: "Transporte Pet",
+      description: "Ida e volta com segurança e conforto!",
+      image: Transporte,
+      icon: <FaBox size={24} className="text-white hover:text-yellow-400 transition-colors duration-300" />,
+    },
   ];
 
   const handleOptionClick = (index) => {
@@ -55,26 +70,32 @@ const InteractiveSelector = () => {
   };
 
   useEffect(() => {
+    setAnimatedOptions([]); // reset para novo conjunto de opções
+
     const timers = [];
 
     options.forEach((_, i) => {
       const timer = setTimeout(() => {
         setAnimatedOptions(prev => [...prev, i]);
-      }, 180 * i);
+      }, 200 * i); // você pode aumentar esse valor para animar mais devagar
       timers.push(timer);
     });
 
     return () => {
       timers.forEach(timer => clearTimeout(timer));
     };
-  }, []);
+  }, [options.length]);
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-gray-100 font-sans text-white">
       {/* Header Section */}
       <div className="w-full max-w-2xl px-6 mt-8 mb-2 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-3 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">Nossa Galeria</h1>
-        <p className="text-lg md:text-xl text-gray-700 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">Veja alguns momentos especiais dos nossos clientes e conheça nossa estrutura e cuidados especializados.</p>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-3 tracking-tight drop-shadow-lg animate-fadeInTop delay-300">
+          Nossa Galeria
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">
+          Veja alguns momentos especiais dos nossos clientes e conheça nossa estrutura e cuidados especializados.
+        </p>
       </div>
 
       <div className="h-12"></div>
@@ -84,13 +105,12 @@ const InteractiveSelector = () => {
         {options.map((option, index) => (
           <div
             key={index}
-            className={`
-                option relative flex flex-col justify-end overflow-hidden transition-all duration-700 ease-in-out
-                ${activeIndex === index ? 'active' : ''}
-              `}
+            className={`option relative flex flex-col justify-end overflow-hidden transition-all duration-700 ease-in-out ${
+              activeIndex === index ? 'active' : ''
+            }`}
             style={{
-              
-              backgroundImage: `url('${option.image}')`,
+             backgroundImage: `url(${option.image})`,
+
               backgroundSize: activeIndex === index ? 'auto 100%' : 'auto 120%',
               backgroundPosition: 'center',
               backfaceVisibility: 'hidden',
@@ -115,7 +135,7 @@ const InteractiveSelector = () => {
               justifyContent: 'flex-end',
               position: 'relative',
               overflow: 'hidden',
-              willChange: 'flex-grow, box-shadow, background-size, background-position'
+              willChange: 'flex-grow, box-shadow, background-size, background-position',
             }}
             onClick={() => handleOptionClick(index)}
           >
@@ -127,7 +147,7 @@ const InteractiveSelector = () => {
                 height: '120px',
                 boxShadow: activeIndex === index
                   ? 'inset 0 -120px 120px -120px #000, inset 0 -120px 120px -80px #000'
-                  : 'inset 0 -120px 0px -120px #000, inset 0 -120px 0px -80px #000'
+                  : 'inset 0 -120px 0px -120px #000, inset 0 -120px 0px -80px #000',
               }}
             ></div>
 
@@ -141,7 +161,7 @@ const InteractiveSelector = () => {
                   className="main font-bold text-lg transition-all duration-700 ease-in-out"
                   style={{
                     opacity: activeIndex === index ? 1 : 0,
-                    transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)'
+                    transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)',
                   }}
                 >
                   {option.title}
@@ -150,7 +170,7 @@ const InteractiveSelector = () => {
                   className="sub text-base text-gray-300 transition-all duration-700 ease-in-out"
                   style={{
                     opacity: activeIndex === index ? 1 : 0,
-                    transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)'
+                    transform: activeIndex === index ? 'translateX(0)' : 'translateX(25px)',
                   }}
                 >
                   {option.description}
@@ -163,42 +183,42 @@ const InteractiveSelector = () => {
 
       {/* Custom animations */}
       <style jsx>{`
-          @keyframes slideFadeIn {
-            0% {
-              opacity: 0;
-              transform: translateX(-60px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateX(0);
-            }
+        @keyframes slideFadeIn {
+          0% {
+            opacity: 0;
+            transform: translateX(-60px);
           }
-          
-          @keyframes fadeInFromTop {
-            0% {
-              opacity: 0;
-              transform: translateY(-20px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
           }
-          
-          .animate-fadeInTop {
+        }
+
+        @keyframes fadeInFromTop {
+          0% {
             opacity: 0;
             transform: translateY(-20px);
-            animation: fadeInFromTop 0.8s ease-in-out forwards;
           }
-          
-          .delay-300 {
-            animation-delay: 0.3s;
+          100% {
+            opacity: 1;
+            transform: translateY(0);
           }
-          
-          .delay-600 {
-            animation-delay: 0.6s;
-          }
-        `}</style>
+        }
+
+        .animate-fadeInTop {
+          opacity: 0;
+          transform: translateY(-20px);
+          animation: fadeInFromTop 0.8s ease-in-out forwards;
+        }
+
+        .delay-300 {
+          animation-delay: 0.3s;
+        }
+
+        .delay-600 {
+          animation-delay: 0.6s;
+        }
+      `}</style>
     </div>
   );
 };

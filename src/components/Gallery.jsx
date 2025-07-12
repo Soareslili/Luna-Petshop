@@ -7,6 +7,7 @@ const Galeria = () => {
        
 
         <InteractiveSelector />
+        <p className="text-lg text-gray-500">✨ Mais de <span className="text-blue-600 font-bold">500 pets felizes</span> já passaram por nossos cuidados!</p>
       </div>
     </section>
   );

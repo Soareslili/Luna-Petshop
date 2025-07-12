@@ -2,6 +2,7 @@ import { Hero } from "./components/Hero";
 import { Service } from "./components/Service";
 
 import Gallery from "./components/Gallery";
+import { Testimonials } from "./components/testimonials";
 
 
 
@@ -12,7 +13,8 @@ function App() {
     <>
       <Hero />
       <Service />
-    <Gallery/>
+      <Gallery />
+      <Testimonials />
     </>
   )
 }
