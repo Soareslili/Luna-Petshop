@@ -3,6 +3,7 @@ import { Service } from "./components/Service";
 
 import Gallery from "./components/Gallery";
 import { Testimonials } from "./components/testimonials";
+import { Contact } from "./components/Contact";
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Service />
       <Gallery />
       <Testimonials />
+      <Contact/>
     </>
   )
 }
