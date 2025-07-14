@@ -4,6 +4,7 @@ import { Service } from "./components/Service";
 import Gallery from "./components/Gallery";
 import { Testimonials } from "./components/testimonials";
 import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Gallery />
       <Testimonials />
       <Contact/>
+      <Footer/>
     </>
   )
 }

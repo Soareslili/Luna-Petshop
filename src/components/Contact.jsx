@@ -1,3 +1,5 @@
+import { Phone } from "lucide-react";
+
 
 
 export function Contact() {
@@ -34,7 +36,7 @@ export function Contact() {
                             <img
                                 className="h-10 w-10 p-2 rounded-full bg-gray-300 "
                                 src="https://img.icons8.com/color/48/place-marker--v1.png"
-                                alt="Ícone telefone"
+                                alt="Ícone endereço"
                             />
 
                             <div className="flex flex-col gap-1 ml-4">
@@ -49,7 +51,7 @@ export function Contact() {
                             <img
                                 className="h-10 w-10 p-2 rounded-full bg-gray-300 "
                                 src="https://img.icons8.com/color/48/new-post.png"
-                                alt="Ícone telefone"
+                                alt="Ícone email"
                             />
 
                             <div className="flex flex-col gap-1 ml-4">
@@ -90,9 +92,59 @@ export function Contact() {
 
                         </div>
 
+                    </div>
 
+
+                    <div className="space-y-6 ">
+                        <div className=" bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 rounded-2xl p-8 text-white text-center animate-sxale-in">
+                            <h3 className="text-2xl font-bold mb-4">
+                                Pronto para Cuidar do Seu Pet?
+                            </h3>
+                            <p className="text-white/90 mb-6 leading-relaxed">
+                                Nossa equipe está esperando para oferecer o melhor cuidado para seu animal de estimação. Agende uma consulta agora mesmo!
+                            </p>
+
+                            <a className="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full mt-5 text-white shadow-lg animate-pulse">
+                                <Phone size={16} />
+                                Agende pelo WhatsApp
+                            </a>
+
+                        </div>
+
+                        <div className="border border-gray-200 rounded-2xl overflow-hidden">
+                            <div className="flex items-center gap-2 p-6">
+                                <img
+                                    className="h-8 w-8"
+                                    src="https://img.icons8.com/color/48/place-marker--v1.png"
+                                    alt="Ícone localização"
+                                />
+                                <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                                    Nossa Localização
+                                </h3>
+                            </div>
+
+                            <div className="px-6 pb-6">
+                                <div className="w-full h-66 rounded-xl overflow-hidden mb-4">
+                                    <iframe
+                                        className="w-full h-full border-0"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.47978193545!2d-46.63343292548797!3d-23.551206061217584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5900b15a1739%3A0xa04ba02905756f1!2sR.%20das%20Fl%C3%B4res%2C%20123%20-%20S%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001019-010!5e0!3m2!1spt-BR!2sbr!4v1752446697296!5m2!1spt-BR!2sbr"
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+
+                                <div className="space-y-2 text-gray-700 text-sm">
+                                    <p>📍 <strong>Endereço:</strong> Rua das Flores, 123 - Centro</p>
+                                    <p>🏙️ <strong>Cidade:</strong> São Paulo, SP - CEP 01234-567</p>
+                                    <p>🚗 <strong>Estacionamento:</strong> Disponível em frente</p>
+                                    <p>🚌 <strong>Transporte:</strong> Próximo ao metrô e pontos de ônibus</p>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
+
                 </div>
             </div>
         </section>

@@ -15,7 +15,7 @@ export function Hero() {
       timers.push(
         setTimeout(() => {
           setVisiblePaws((prev) => [...prev, i]);
-        }, i * 600) // 400ms de diferença entre cada pata
+        }, i * 600) 
       );
     }
 
@@ -32,7 +32,7 @@ export function Hero() {
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#home">Home</a>
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#servicos">Serviços</a>
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#galeria">Galeria</a>
-            <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#depoimento">Depoimento</a>
+            <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#depoimento">Depoimentos</a>
             <a className="text-foreground hover:text-blue-500 transition-colors duration-200 font-medium" href="#contato">Contato</a>
             <a
               className="text-white font-medium text-sm px-3 py-2 bg-blue-500 rounded-md transition-transform duration-400 transform hover:scale-110"
@@ -45,7 +45,7 @@ export function Hero() {
       </header>
 
       <section className="relative flex flex-col-reverse md:flex-row items-center justify-between mt-32 overflow-hidden">
-        {/* Patas animadas */}
+      
         {visiblePaws.includes(0) && (
           <img src={Pata1} alt="pata-do-cachorro"
             className="hidden md:block absolute left-[35%] top-[5%] w-40 opacity-60 rotate-12 pointer-events-none z-0 transition-all duration-700 ease-out translate-y-0 opacity-100" />
@@ -63,7 +63,7 @@ export function Hero() {
             className="hidden md:block absolute right-[4%] bottom-[17%] w-40 opacity-60 -rotate-12 pointer-events-none z-0 transition-all duration-700 ease-out translate-y-0 opacity-100" />
         )}
 
-        {/* Imagem e texto */}
+       
         <div className="md:w-1/2 flex justify-center z-20">
           <img className="w-100 mt-6 mr-20" src={Cachorro} alt="Cachorro lateral direito" />
         </div>
