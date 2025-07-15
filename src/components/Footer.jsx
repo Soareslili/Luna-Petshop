@@ -1,10 +1,12 @@
 
+import { FaWhatsapp } from "react-icons/fa";
+
 import Logo from '../assets/logo.png'
 
 
 export function Footer() {
     return (
-        <section className="w-full h-full bg-black">
+        <footer className="w-full h-full bg-black">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Coluna 1 - Sobre */}
@@ -82,14 +84,14 @@ export function Footer() {
 
 
                 <div className="border-t border-gray-600 mt-12 pt-8">
-                   
+
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
-                      
+
                         <p className="text-sm text-gray-400 text-center md:text-left w-full md:w-auto">
                             © 2025 LunaPetShop. Todos os direitos reservados.
                         </p>
 
-                       
+
                         <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
                             <span>🏆 Nota 5⭐ no Google</span>
                             <span>📱 500+ Clientes Satisfeitos</span>
@@ -97,7 +99,7 @@ export function Footer() {
                         </div>
                     </div>
 
-                
+
                     <div className="mt-6">
                         <p className="text-sm text-gray-300 text-center">
                             Desenvolvido por Lidiane Santos - Desenvolvedora Front-End
@@ -106,7 +108,23 @@ export function Footer() {
                 </div>
 
             </div>
-        </section>
+
+
+
+            <a
+                href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20os%20trabalho&type=phone_number&app_absent=0"
+                className="fixed bottom-4 right-4 z-[50] group"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <FaWhatsapp className="w-10 h-10 sm:w-12 sm:h-12 text-green-500 transition-transform duration-300 group-hover:scale-110" />
+
+                <span className="hidden sm:block absolute -left-[150px] top-30 w-[100px] px-3 py-2 rounded-lg text-center text-sm font-medium bg-white text-green-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Conheça nossos Trabalhos
+                </span>
+            </a>
+
+        </footer>
 
     )
 }

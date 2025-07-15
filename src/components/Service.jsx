@@ -82,40 +82,42 @@ export function Service() {
     return (
         <section className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+                <h2 id="servicos" className="text-3xl sm:text-4xl font-bold mb-4 text-center">
                     Nossos Serviços
                 </h2>
-                <p className="text-lg text-gray-500 max-w-2xl mx-auto text-center mb-10">
+                <p className="text-lg text-gray-500 max-w-2xl mx-auto text-center mb-10 px-4">
                     Oferecemos uma gama completa de serviços para cuidar do seu pet com todo o carinho e profissionalismo que ele merece.
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-2">
                     {servicos.map((servico, index) => (
                         <div
                             key={index}
-                            className="bg-gray-100 rounded-xl p-6 shadow hover:shadow-lg transition hover:scale-105"
+                            className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:scale-105 flex flex-col justify-between"
                         >
-                            <h3 className="text-xl font-bold text-blue-700 mb-2">{servico.titulo}</h3>
-                            <p className="text-sm text-gray-400 mb-4">{servico.descricao}</p>
+                            <div>
+                                <h3 className="text-xl font-bold text-blue-700 mb-2">{servico.titulo}</h3>
+                                <p className="text-sm text-gray-500 mb-4">{servico.descricao}</p>
 
-                            <ul className="space-y-2 mb-4">
-                                {servico.itens.map((item, idx) => (
-                                    <li key={idx} className="flex items-center text-sm text-muted-foreground gap-2">
-                                        <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                                <ul className="space-y-2 mb-4">
+                                    {servico.itens.map((item, idx) => (
+                                        <li key={idx} className="flex items-center text-sm text-muted-foreground gap-2">
+                                            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
 
-                            {servico.preco && (
-                                <p className="text-sm text-blue-700 font-medium mb-3 mt-6">
-                                    A partir de <strong>{servico.preco}</strong>
-                                </p>
-                            )}
+                                {servico.preco && (
+                                    <p className="text-sm text-blue-700 font-medium mt-4">
+                                        A partir de <strong>{servico.preco}</strong>
+                                    </p>
+                                )}
+                            </div>
 
                             <a
                                 href={servico.link}
-                                className="w-full inline-flex items-center justify-center gap-2 text-sm rounded-md py-2 px-4 bg-gray-200 shadow  hover:bg-blue-500 hover:text-white hover:border-transparente transition"
+                                className="mt-6 inline-flex items-center justify-center gap-2 text-sm rounded-md py-2 px-4 bg-gray-200 hover:bg-blue-500 hover:text-white transition"
                             >
                                 <Phone size={16} />
                                 Agendar Agora
@@ -123,11 +125,17 @@ export function Service() {
                         </div>
                     ))}
                 </div>
-                <a
-                    className="bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full mt-20 ml-[38%] text-white shadow-lg hover:from-blue-800 hover:to-cyan-500 transition cursor-pointer transition-transform duration-400 transform hover:scale-110"
-                >
-                    Fale conosco pelo WhatsApp.!
-                </a>
+
+                <div className="flex justify-center mt-16 px-4">
+                    <a
+                        className="bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full text-white shadow-lg hover:from-blue-800 hover:to-cyan-500 transition-transform hover:scale-110"
+                        href="https://wa.me/SEUNUMEROAQUI" // substitua pelo seu link real
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Fale conosco pelo WhatsApp!
+                    </a>
+                </div>
             </div>
         </section>
     );
