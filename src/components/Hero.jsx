@@ -41,7 +41,7 @@ export function Hero() {
     <>
       <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-300">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-          <img id='Home' src={Logo} alt="Logo Luna Petshop" className="w-20 h-20" />
+          <img  src={Logo} alt="Logo Luna Petshop" className="w-20 h-20" />
 
           {/* Navegação Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -57,13 +57,13 @@ export function Hero() {
 
             <a
               className="text-white font-medium text-sm px-4 py-2 bg-blue-500 rounded-md transition-transform duration-300 hover:scale-105"
-              href="#contato"
+              href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Luna%20PetShop&type=phone_number&app_absent=0"
             >
               Entre em Contato
             </a>
           </nav>
 
-          {/* Botão Menu Mobile */}
+      
           <div className="md:hidden">
             <button onClick={() => setMenuOpen(!menuOpen)} className="text-blue-600 focus:outline-none">
               {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -71,9 +71,10 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Navegação Mobile */}
+   
         {menuOpen && (
-          <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
+        <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4 z-50 relative">
+
             {['Home', 'Serviços', 'Galeria', 'Depoimentos', 'Contato'].map((item, idx) => (
               <a
                 key={idx}
@@ -85,7 +86,7 @@ export function Hero() {
               </a>
             ))}
             <a
-              href="#contato"
+              href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Luna%20PetShop&type=phone_number&app_absent=0"
               className="inline-block w-full text-center text-white font-medium bg-blue-500 px-4 py-2 rounded-md"
             >
               Entre em Contato
@@ -94,8 +95,8 @@ export function Hero() {
         )}
       </header>
 
-      <section className="relative flex flex-col-reverse md:flex-row items-center justify-between mt-28 px-6 md:px-12 overflow-hidden">
-        {/* Patinhas com animação */}
+      <section id='home' className="relative flex flex-col-reverse md:flex-row items-center justify-between mt-28 px-6 md:px-12">
+    
         {pawImages.map((paw, i) =>
           visiblePaws.includes(i) ? (
             <img
@@ -107,7 +108,7 @@ export function Hero() {
           ) : null
         )}
 
-        {/* IMAGEM DO CACHORRO – Só aparece no desktop */}
+     
         <div className="hidden md:flex md:w-1/2 mr-10 z-10">
           <img
             src={Cachorro}
@@ -117,9 +118,9 @@ export function Hero() {
 
         </div>
 
-        {/* TEXTO + BOTÕES */}
+     
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mt-10 md:mt-0 z-10 space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-700 leading-tight">
+          <h1  className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-700 leading-tight">
             Cuidado e Amor <span className="block md:inline">para </span>
             <br className="block md:hidden" />
             <span className="block md:inline bg-gradient-to-r from-blue-400 via-pink-300 to-purple-400 bg-clip-text text-transparent">
@@ -132,7 +133,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start ml-10 w-full sm:w-auto">
             <a
-              href="#contato"
+              href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Luna%20PetShop&type=phone_number&app_absent=0"
               className="px-6 py-3 bg-blue-700 rounded-3xl text-white font-medium text-sm sm:text-base text-center transition-transform hover:scale-105"
             >
               Agendar Consulta

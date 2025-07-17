@@ -78,7 +78,7 @@ const InteractiveSelector = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="w-full max-w-2xl px-4 mt-8 mb-4 text-center">
-        <h1 id="option" className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-3 tracking-tight animate-fadeInTop delay-300">
+        <h1 id="options" className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-3 tracking-tight animate-fadeInTop delay-300">
           Nossa Galeria
         </h1>
         <p className="text-lg md:text-xl text-gray-700 font-medium max-w-xl mx-auto animate-fadeInTop delay-600">

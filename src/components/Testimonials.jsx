@@ -65,7 +65,7 @@ export function Testimonials() {
     }, []);
 
     return (
-        <section className="py-20 bg-gray-100">
+        <section id="depoimentos" className="py-20 bg-gray-100">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 id="testimonials" className="text-3xl sm:text-4xl font-bold text-foreground mb-4 text-center">
                     O Que Nossos Clientes Dizem

@@ -1,6 +1,8 @@
 
 import { Phone } from "lucide-react";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const servicos = [
@@ -14,7 +16,7 @@ const servicos = [
             "Limpeza de ouvidos"
         ],
         preco: "R$ 45",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Banho%20e%20Tosa&type=phone_number&app_absent=0"
     },
     {
         titulo: "Consultas Veterinárias",
@@ -26,7 +28,7 @@ const servicos = [
             "Emergências"
         ],
         preco: "R$ 80",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Consulta%20Veterinária&type=phone_number&app_absent=0"
     },
     {
         titulo: "Hotel para Pets",
@@ -38,7 +40,7 @@ const servicos = [
             "Cuidados 24h"
         ],
         preco: "R$ 60/dia",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Hotel%20para%20Pets&type=phone_number&app_absent=0"
     },
     {
         titulo: "Adestramento",
@@ -49,7 +51,7 @@ const servicos = [
             "Correção de comportamentos"
         ],
         preco: "",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Adestramento&type=phone_number&app_absent=0"
     },
     {
         titulo: "Pet Taxi",
@@ -60,7 +62,7 @@ const servicos = [
             "Segurança garantida"
         ],
         preco: "",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Pet%20Taxi&type=phone_number&app_absent=0"
     },
     {
         titulo: "Cuidados Especiais",
@@ -71,7 +73,7 @@ const servicos = [
             "Acompanhamento nutricional"
         ],
         preco: "",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Cuidados%20Especiais&type=phone_number&app_absent=0"
     }
 ];
 
@@ -79,10 +81,14 @@ const servicos = [
 
 
 export function Service() {
+     useEffect(() => {
+            AOS.init({ duration: 1200, easing: "ease-out-cubic", once: true });
+        }, [])
+
     return (
-        <section className="py-20 bg-gray-50">
+        <section id="servicos" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="servicos" className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+                <h2  className="text-3xl sm:text-4xl font-bold mb-4 text-center">
                     Nossos Serviços
                 </h2>
                 <p className="text-lg text-gray-500 max-w-2xl mx-auto text-center mb-10 px-4">
@@ -93,7 +99,11 @@ export function Service() {
                     {servicos.map((servico, index) => (
                         <div
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={index * 250}
+                            data-aos-once="true"
                             className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition hover:scale-105 flex flex-col justify-between"
+                            
                         >
                             <div>
                                 <h3 className="text-xl font-bold text-blue-700 mb-2">{servico.titulo}</h3>
@@ -128,8 +138,8 @@ export function Service() {
 
                 <div className="flex justify-center mt-16 px-4">
                     <a
-                        className="bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full text-white shadow-lg hover:from-blue-800 hover:to-cyan-500 transition-transform hover:scale-110"
-                        href="https://wa.me/SEUNUMEROAQUI" // substitua pelo seu link real
+                        className="bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full text-white shadow-lg hover:from-blue-800 hover:to-cyan-500 transition-transform hover:scale-105"
+                        href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20os%20trabalho&type=phone_number&app_absent=0" 
                         target="_blank"
                         rel="noopener noreferrer"
                     >

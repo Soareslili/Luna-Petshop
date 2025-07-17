@@ -1,5 +1,5 @@
 
-import { FaWhatsapp } from "react-icons/fa";
+
 
 import Logo from '../assets/logo.png'
 
@@ -18,23 +18,23 @@ export function Footer() {
                         </p>
 
                         <div className="flex items-center gap-4 mt-4">
-                            <a href="https://wa.me/SEUNUMEROAQUI" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" className="w-6 h-6" />
+                            <a href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20o%20Luna520PetShop&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" className="w-8 h-8 transition-transform hover:scale-105" />
                             </a>
                             <a href="https://instagram.com/SEUINSTAGRAM" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" className="w-6 h-6" />
+                                <img src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="Instagram" className="w-8 h-8 transition-transform hover:scale-105" />
                             </a>
                             <a href="https://facebook.com/SEUFACEBOOK" target="_blank" rel="noopener noreferrer">
-                                <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" className="w-6 h-6" />
+                                <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" className="w-8 h-8 transition-transform hover:scale-105" />
                             </a>
                         </div>
                     </div>
 
-                    {/* Coluna 2 - Links Rápidos */}
+                 
                     <div className="space-y-4">
                         <h4 className="text-lg font-semibold text-white">Links Rápidos</h4>
                         <ul className="flex flex-col gap-2">
-                            <li><a href="#inicio" className="text-white hover:text-blue-500 transition-colors duration-200">Início</a></li>
+                            <li><a href="#home" className="text-white hover:text-blue-500 transition-colors duration-200">Início</a></li>
                             <li><a href="#servicos" className="text-white hover:text-blue-500 transition-colors duration-200">Serviços</a></li>
                             <li><a href="#galeria" className="text-white hover:text-blue-500 transition-colors duration-200">Galeria</a></li>
                             <li><a href="#depoimentos" className="text-white hover:text-blue-500 transition-colors duration-200">Depoimentos</a></li>
@@ -42,7 +42,7 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Coluna 3 - Nossos Serviços */}
+               
                     <div className="space-y-4">
                         <h4 className="text-lg font-semibold text-white">Nossos Serviços</h4>
                         <ul className="flex flex-col gap-2 text-sm text-gray-400">
@@ -55,7 +55,6 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Coluna 4 - Contato */}
                     <div className="space-y-4">
                         <h4 className="text-lg font-semibold text-white">Contato</h4>
                         <p className="text-sm text-gray-400 flex items-center gap-2">
@@ -111,18 +110,7 @@ export function Footer() {
 
 
 
-            <a
-                href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20os%20trabalho&type=phone_number&app_absent=0"
-                className="fixed bottom-4 right-4 z-[50] group"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FaWhatsapp className="w-10 h-10 sm:w-12 sm:h-12 text-green-500 transition-transform duration-300 group-hover:scale-110" />
-
-                <span className="hidden sm:block absolute -left-[150px] top-30 w-[100px] px-3 py-2 rounded-lg text-center text-sm font-medium bg-white text-green-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Conheça nossos Trabalhos
-                </span>
-            </a>
+           
 
         </footer>
 

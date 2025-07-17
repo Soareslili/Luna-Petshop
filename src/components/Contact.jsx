@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 
 export function Contact() {
     return (
-        <section className="py-20 bg-gray-50">
+        <section id="contato" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 id="Contato" className="text-3xl sm:text-4xl font-bold mb-4">Entre em Contato</h2>
