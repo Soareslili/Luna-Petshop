@@ -6,7 +6,7 @@ import Pata2 from '../assets/pata2.png';
 import Pata3 from '../assets/pata3.png';
 import Pata4 from '../assets/pata4.png';
 import Pata5 from '../assets/pata5.png';
-import Pata6 from '../assets/Pata6.png';
+import Pata6 from '../assets/pata6.png';
 import Pata7 from '../assets/pata7.png';
 import { Menu, X } from 'lucide-react';
 
