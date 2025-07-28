@@ -2,7 +2,7 @@ import { Hero } from "./components/Hero";
 import { Service } from "./components/Service";
 
 import Gallery from "./components/Gallery";
-import { Testimonials } from "./components/testimonials";
+import { Testimonials } from "./components/Testimonials";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
