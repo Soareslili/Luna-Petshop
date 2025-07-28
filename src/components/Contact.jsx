@@ -104,7 +104,12 @@ export function Contact() {
                                 Nossa equipe está esperando para oferecer o melhor cuidado para seu animal de estimação. Agende uma consulta agora mesmo!
                             </p>
 
-                            <a className="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full mt-5 text-white shadow-lg animate-pulse">
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=556899998899&text=Olá%20gostaria%20de%20saber%20mais%20sobre%20Luna%20PetShop&type=phone_number&app_absent=0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-500 inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap text-sm font-medium px-6 py-4 rounded-full mt-5 text-white shadow-lg animate-pulse"
+                            >
                                 <Phone size={16} />
                                 Agende pelo WhatsApp
                             </a>
