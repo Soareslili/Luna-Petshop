@@ -28,7 +28,7 @@ export function Hero() {
   }, []);
 
   const pawImages = [
-    { src: Pata1, className: 'left-[35%] top-[2%] rotate-12 opacity-60' },
+    { src: Pata1, className: 'left-[40%] top-[2%] rotate-12 opacity-60' },
     { src: Pata2, className: 'right-[5%] top-[10%] -rotate-6 opacity-50' },
     { src: Pata3, className: 'left-[45%] bottom-[25%] rotate-45 opacity-50' },
     { src: Pata4, className: 'right-[4%] bottom-[35%] -rotate-12 opacity-60' },
